@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste d'émargement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <style>
+         body{
+            
+            background-color: #d5c46f;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h5 class="text-center"><button class="btn btn-outline-light btn-dark mb-2 me-2 my-2 my-sm-0 "> <a class="nav-link fw-bold" href="/emarge/emarger/"><--Retour</a></button> </h5>
+<div class="row">
+    
+    <div class="col-md-10 mx-auto">
+        <br>
+        <div class="card card">
+            <a class="btn btn-dark text-white btn-sm btn-block" href="">Nom et Prénom + Date et Heure d'Emargement + Nombre d'Heures</a>
+            <table class="table table-sm ", style="background-color:rgb(163, 242, 217)">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>N°</th>
+                    <th>Nom et Prénom</th>
+                    <th>Jour - Heure</th>
+                    <th>Nombre d'Heures</th>
+                </tr>
+
+                {% for emarge in  emarge %}
+
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th class="text-secondary"> <a href="#"></a> {{ emarge.id }}</th>
+                    <th class="text-secondary">{{ emarge.nom }}</th>
+                    <th class="text-success" >{{ emarge.emargement }}</th>
+                    <th class="text-success" >{{ emarge.nombre_d_heures }}</th>
+
+                </tr>
+                
+                {% endfor %}    
+            </table>
+            <button class="btn btn-outline-success btn-dark"> <a class="text-white fw-bold" href="#" OnClick="javascript:window.print()">Imprimer</a></button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+

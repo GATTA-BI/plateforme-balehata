@@ -1,0 +1,35 @@
+{% extends 'menu.html'%}
+
+{% block contenu %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="card card">
+            <span class="d-block p-2 bg-dark text-white text-center">Professeur ou Professeure de Baléhata</span>
+            <table class="table table-sm" style="background-color: rgb(252, 230, 139)">
+                <tr>
+                    <th></th>
+                    <th>N°</th>
+                    <th>Nom et Prénom</th>
+                    <th>Matière</th>
+                    <th>Année d'Expérience à Baléhata</th>
+                    <th>Téléphone</th>
+                </tr>
+
+                {% for professeurs in  prof %}
+
+                <tr>
+                    <th></th>
+                    <th class="text-secondary">{{ professeurs.id }}</th>
+                    <th class="text-secondary">{{ professeurs.nom }}</th>
+                    <th class="text-secondary">{{ professeurs.matiere }}</th>
+                    <th class="text-secondary">{{ professeurs.annee }}</th>
+                    <th class="text-secondary">{{ professeurs.telephone }}</th>
+                </tr>
+
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

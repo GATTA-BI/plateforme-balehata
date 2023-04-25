@@ -1,0 +1,35 @@
+{% extends 'menu.html'%}
+
+{% block contenu %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="card card">
+            <span class="d-block p-2 bg-dark text-white text-center">Instituteurs ou Institutrices de Baléhata</span>
+            <table class="table table-sm" style="background-color: rgb(252, 230, 139)">
+                <tr>
+                    <th></th>
+                    <th>N°</th>
+                    <th>Nom et Prénom</th>
+                    <th>Classe</th>
+                    <th>Année d'Expérience à Baléhata</th>
+                    <th>Téléphone</th>
+                </tr>
+
+                {% for instituteurs in  insti %}
+
+                <tr>
+                <th></th>
+                <th>{{ instituteurs.id }}</th>
+                <th>{{ instituteurs.nom }}</th>
+                <th>{{ instituteurs.classe }}</th>
+                <th>{{ instituteurs.annee }}</th>
+                <th>{{ instituteurs.telephone }}</th>
+                </tr>
+
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

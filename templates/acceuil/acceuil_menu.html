@@ -1,0 +1,95 @@
+
+
+{% extends 'menu.html' %}
+
+{% block contenu %}
+
+{% load static %}
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/02.jpg'%}" alt="" width="100%" class="d-inline-block align-text-top" bd-placeholder-img width="100%" height="30%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="50%"></rect> 
+      <div class="carousel-caption">
+        <h1>Bienvenue sur la plateforme de gestion de Baléhata </h1>
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <img src="{% static 'images/03.jpg'%}" alt="" width="100%" height="20%" class="d-inline-block align-text-top" bd-placeholder-img width="100%" height="30%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="50%"></rect>    
+      <div class="carousel-caption">
+        <h1> Cette plateforme gère l'émargement du personnel Balehata</h1>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/04.jpg'%}" alt="" width="100%" height="20%" class="d-inline-block align-text-top" bd-placeholder-img width="100%" height="30%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="50%"></rect> 
+      <div class="carousel-caption">
+        <h1> Les émargements sont enregistrés et partagés</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- <center>
+<div class="col-md-12 mx-auto">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/l03.png'%}" alt="" width="65%" height="30%" class="d-inline-block align-text-top" bd-placeholder-img width="100%" height="30%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="50%" fill="#777">
+        <div class="container">
+          <div class="carousel-caption text-start">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/l01.png'%}" alt="" width="65%" height="30%" class="d-inline-block align-text-top" bd-placeholder-img width="100%" height="30%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="50%" fill="#777">
+        <div class="container">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/l02.png'%}" alt="" width="65%" height="30%" class="d-inline-block align-text-top" bd-placeholder-img width="100%" height="30%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="50%" fill="#777">
+        <div class="container">
+          <div class="carousel-caption text-end">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+</div>
+</center> -->
+
+{% endblock %}

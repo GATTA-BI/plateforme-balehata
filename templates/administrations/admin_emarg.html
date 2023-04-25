@@ -1,0 +1,51 @@
+
+{% extends 'menu.html' %}
+
+{% block contenu %}
+<br>
+<h5 class="text-center">Employé :<a href="/administ/ajouter/" class="btn btn-outline-success  mb-2 me-2 my-2 my-sm-0"> 
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg> Ajouter
+</a> <a href="{% url 'emarger' %} "class="btn btn-outline-success"> 
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+      </svg> Emarger</a>
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <br>
+            <div class="card card ">
+                <span class="d-block p-2 bg-dark text-white text-center">Liste des employés du Groupe Scolaire Baléhata </span>
+                <table class="table table-sm" style="background-color: rgb(252, 230, 139)">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th class="fw-bold">N°</th>
+                        <th class="fw-bold">Nom et Prénom</th>
+                        <th class="fw-bold">Fonction</th>
+                        <th class="fw-bold">Téléphone</th>
+                       
+                    </tr>
+
+                    {% for administrations in  administra %}
+                    
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th class="text-secondary"> {{ administrations.id }} </th>
+                        <th class="text-secondary">{{ administrations.nom }}</th>
+                        <th class="text-secondary">{{ administrations.fonction }}</th>
+                        <th class="text-secondary">{{ administrations.telephone }}</th>
+                        
+                        <!-- <th><button class="btn btn-outline-light btn-white mb-2 me-2 my-2 my-sm-0 "> <a class="nav-link fw-bold" href="/emarge/">Arrivée</a></button></th>
+                        <th><button class="btn btn-outline-light btn-white mb-2 me-2 my-2 my-sm-0 "> <a class="nav-link fw-bold" href="/emarge/">Départ</a></button></th> -->
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
