@@ -17,6 +17,7 @@ class Emarge(models.Model):
              ('EPS', 'EPS'),
              ('PRIMAIRE', 'PRIMAIRE'),
              ('Educateur','Educateur'),
+             ('Directeur','Directeur'),
              ('Caissière', 'Caissière'),
              ('Stagiaire', 'Stagiaire'),
              ('Gardiennage', 'Gardiennage'))
